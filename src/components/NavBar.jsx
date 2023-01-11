@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Header() {
+function NavBar() {
   return (
     <header>
       <div className="p-5 bg-sky-500 text-white text-4xl">logo</div>
@@ -8,4 +8,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default NavBar;
