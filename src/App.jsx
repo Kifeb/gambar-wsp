@@ -26,8 +26,14 @@ export class App extends Component {
   handleChange(e) {
     e.preventDefault();
 
-    if (!this.state.img || !this.state.urls || !this.state.domain) {
-      return alert('iSi dUlu k4kA');
+    if (
+      !this.state.img ||
+      !this.state.urls ||
+      !this.state.domain ||
+      !this.state.extension ||
+      !this.state.quantity
+    ) {
+      return alert('Please fill out all fields');
     }
 
     const urls = [];
