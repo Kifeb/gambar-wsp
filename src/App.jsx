@@ -49,7 +49,7 @@ export class App extends Component {
     return (
       <>
         <NavBar />
-        <main className="h-[70vh] grid grid-cols-2 mt-8">
+        <main className="md:h-[70vh] mt-6 mb-16 grid gap-7 grid-cols-1 md:mt-0 md:mb-0 md:gap-0 md:grid-cols-2 relative z-[1]">
           <InputForm
             domain={this.state.domain}
             img={this.state.img}

@@ -55,7 +55,7 @@
   }
 
   .input {
-    @apply absolute w-full h-full outline-none z-10 p-1 font-vt323;
+    @apply absolute w-full h-full outline-none z-10 p-1 font-vt323 text-2xl;
     border: solid 2.5px black;
     transition: transform 0.3s;
   }
