@@ -6,7 +6,12 @@ module.exports = {
     './index.html',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        chewy: ['Chewy', 'cursive'],
+        vt323: ['VT323', 'monospace'],
+      },
+    },
   },
   plugins: [],
   import: ['./path/to/prism.css'],

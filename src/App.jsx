@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import InputForm from './components/InputForm';
 import ListResult from './components/ListResult';
 import NavBar from './components/NavBar';
 
@@ -33,12 +34,12 @@ export class App extends Component {
       !this.state.extension ||
       !this.state.quantity
     ) {
-      return alert('Please fill out all fields');
+      return alert('Isi dulu dong,baru bisa lanjut');
     }
 
     const urls = [];
     for (let i = 1; i <= this.state.quantity; i++) {
-      const url = `https://${this.state.domain}/uploads/${this.state.img}${i}.${this.state.extension},`;
+      const url = `https://${this.state.domain}/uploads/${this.state.img}${i}.${this.state.extension}`;
       urls.push(url);
     }
     this.setState({urls});
@@ -48,44 +49,15 @@ export class App extends Component {
     return (
       <>
         <NavBar />
-        <main>
-          <section className="flex justify-center">
-            <form className="flex flex-col w-6/12">
-              <input
-                type="text"
-                name="domain"
-                value={this.state.domain}
-                placeholder="Nama Domain"
-                onChange={this.InputChange}
-              />
-              <input
-                type="text"
-                name="img"
-                value={this.state.img}
-                placeholder="Nama Gambar"
-                onChange={this.InputChange}
-              />
-              <input
-                type="text"
-                name="extension"
-                value={this.state.extension}
-                placeholder="Extensi Gambar"
-                onChange={this.InputChange}
-              />
-              <input
-                type="number"
-                name="quantity"
-                value={this.state.quantity}
-                placeholder="Jumlah Gambar"
-                onChange={this.InputChange}
-              />
-              <br />
-              <button type="submit" onClick={this.handleChange}>
-                Log URLs
-              </button>
-            </form>
-          </section>
-
+        <main className="h-[70vh] grid grid-cols-2 mt-8">
+          <InputForm
+            domain={this.state.domain}
+            img={this.state.img}
+            extension={this.state.extension}
+            quantity={this.state.quantity}
+            InputChange={this.InputChange}
+            handleChange={this.handleChange}
+          />
           <ListResult urls={this.state.urls} />
         </main>
       </>

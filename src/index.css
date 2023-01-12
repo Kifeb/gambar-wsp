@@ -6,34 +6,64 @@
   * {
     @apply box-border;
   }
+  body {
+    background-color: #9affe7;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
 }
 
-@layer components {
-  .text-area {
-    width: 300px; /* adjust to your desired width */
-    height: 100px; /* adjust to your desired height */
-    padding: 10px; /* add some padding */
-    border: 1px solid #ccc; /* add a border */
-    box-sizing: border-box; /* so that padding and border are included in the size */
-    font-size: 16px; /* adjust the font size */
-    resize: none; /* prevent the textarea from being resizable */
-    overflow: auto; /*add overflow */
-    overflow-x: hidden; /* hide horizontal scrollbar */
-    position: fixed; /*position fixed */
-    bottom: 0; /* position at the bottom*/
-    left: 0; /* position at the left*/
-    background-color: white; /* add background color to text area*/
-    z-index: 1; /* stack text area above other element*/
+@layer utilities {
+  .box {
+    box-shadow: 8px 8px 0px 0px #000000;
   }
-  .btn-clipboard {
-    padding: 10px 15px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
+  .brown {
+    background-color: #c48a3c;
+  }
+  .yellow {
+    background-color: #fce904;
+  }
+  .tyellow {
+    color: #fce904;
+  }
+  .soft {
+    background-color: #ddc5ae;
   }
 
-  .btn-clipboard:hover {
-    background-color: #0069d9;
+  .red {
+    background-color: #e12e1b;
+    border: solid 2.5px;
+    transition: transform 0.3s;
+  }
+
+  .bosolid {
+    border: solid 3px black;
+  }
+  .inputfield {
+    @apply w-[225px] h-[36px] relative;
+  }
+  .input {
+    @apply absolute w-full h-full outline-none z-10 p-1 font-vt323;
+    border: solid 2.5px black;
+    transition: transform 0.3s;
+  }
+  .input::placeholder {
+    font-size: 11px;
+    font-family: 'Press Start 2P', cursive;
+  }
+
+  .bit {
+    font-family: 'Press Start 2P', cursive;
   }
 }
