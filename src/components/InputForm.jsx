@@ -20,9 +20,8 @@ function InputForm({
             placeholder="NAMA DOMAIN"
             onChange={InputChange}
           />
-          <label for="" className="">
-            NAMA DOMAIN
-          </label>
+          <label className="form_label">NAMA DOMAIN</label>
+          <div className="shadow"></div>
         </div>
         <div className="inputfield">
           <input
@@ -33,7 +32,8 @@ function InputForm({
             placeholder="NAMA GAMBAR"
             onChange={InputChange}
           />
-          <label className="">NAMA GAMBAR</label>
+          <label className="form_label">NAMA GAMBAR</label>
+          <div className="shadow"></div>
         </div>
         <div className="inputfield">
           <input
@@ -44,7 +44,8 @@ function InputForm({
             placeholder="EXTENSI GAMBAR"
             onChange={InputChange}
           />
-          <label className="">EXTENSI GAMBAR</label>
+          <label className="form_label">EXTENSI GAMBAR</label>
+          <div className="shadow"></div>
         </div>
         <div className="inputfield">
           <input
@@ -55,15 +56,17 @@ function InputForm({
             placeholder="JUMLAH GAMBAR"
             onChange={InputChange}
           />
-          <label className="">JUMLAH GAMBAR</label>
+          <label className="form_label">JUMLAH GAMBAR</label>
+          <div className="shadow"></div>
         </div>
-        <div className="inputfield flex justify-center">
+        <div className="w-[112.5px] h-[36px] relative flex justify-center">
           <button
-            className="h-full w-1/2 red bit"
+            className="h-full w-full z-10 red bit"
             type="submit"
             onClick={handleChange}>
             HIT
           </button>
+          <div className="shadow"></div>
         </div>
       </form>
     </section>
