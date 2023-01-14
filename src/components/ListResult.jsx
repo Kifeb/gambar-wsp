@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 function ListResult({urls}) {
+  const [copied, setCopied] = useState(false);
   function copy() {
     navigator.clipboard.writeText(urls);
-  }
 
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+    }, 1000);
+  }
   return (
     <section className="flex justify-center items-center flex-col overflow-hidden">
       {urls.length > 0 && (
@@ -28,6 +33,11 @@ function ListResult({urls}) {
                 copy
               </button>
             </div>
+            {copied && (
+              <div className="absolute top-[-24px] right-[-14px] bit">
+                Copied!
+              </div>
+            )}
           </div>
         </>
       )}
